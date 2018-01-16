@@ -1,0 +1,20 @@
+
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=2cm, state/.style={circle, draw, minimum size=1.3cm, scale=0.6}]
+\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+\node[state]    (0)  		{$0$};
+\node[state]    (+1)[right of=0]   		{$1$};
+\node[state]    (+inf) [right of=+1] 	{$...$};
+\node[state]    (+C-1)[right of=+inf]   {$C_i - 1$};
+\node[state]	(+C)[right of=+C-1]		{$C_i$};
+\path
+(0)     edge[bend left]         node{$\lambda$}   (+1)
+(+1)    edge[bend left]         node{$\lambda$}   (+inf)
+        edge[bend left,below]   node{$\mu$}       (0)
+(+inf)  edge[bend left]   		node{$\lambda$}   (+C-1)
+		edge[bend left,below]	node{$\mu$}		  (+1)
+(+C-1)  edge[bend left]   		node{$\lambda$}   (+C)
+		edge[bend left,below]	node{$\mu$}		  (+inf)
+(+C)	edge[bend left,below]	node{$\mu$}       (+C-1);	
+\end{tikzpicture}
+\end{center}

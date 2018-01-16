@@ -1,0 +1,52 @@
+\documentclass[10pt]{beamer}
+\usepackage{tikz}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepackage{caption}
+\usepackage[backend=biber,style=alphabetic, citestyle=authoryear]{biblatex}
+
+\usetikzlibrary{positioning,automata,arrows,positioning,calc}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepgfplotslibrary{dateplot}
+\setbeamerfont{footnote}{size=\tiny}
+\addbibresource{bibliography.bib}
+
+\title{Optimizing Mobility-on-Demand Systems for High Throughput}
+\subtitle{Ph.D. Oral Exam}
+\author{\textbf{Harshal A. Chaudhari}}
+\date{January 16, 2018}
+
+\begin{document}
+    % Title frame
+    \begin{frame}[plain, noframenumbering]
+        \maketitle
+        \begin{tikzpicture}[overlay, remember picture]
+            \node[above right=.5cm and .8cm of current page.south west]{\includegraphics[scale=0.12]{logos/logo-bu.png}};
+        \end{tikzpicture}
+    \end{frame}
+
+    % Table of Contents
+    % \begin{frame}{Table of Contents}
+    %     \setbeamertemplate{section in toc}[sections numbered]
+    %     \tableofcontents[hideallsubsections]
+    % \end{frame}
+
+    % Problem motivation
+    \input{motivation}
+
+    \input{paper1}
+
+    \input{paper2}
+
+    \input{paper3}
+
+    \input{problems}
+
+    % Bibliography
+    \begin{frame}[allowframebreaks]{References}
+        \printbibliography
+    \end{frame}
+
+\end{document}

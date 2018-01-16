@@ -1,0 +1,51 @@
+%!TEX root = oral.tex
+
+\section{Problem Motivation}
+
+    \begin{frame}{Mobility-on-Demand Systems}
+    \metroset{block=fill}
+    \begin{block}{U.S. Department of Transportation}
+    ``Mobility-on-Demand (MoD) is an innovative, user-focused approach which leverages emerging mobility services,
+    integrated transit networks, real-time data, and cooperative Intelligent Transportation Systems to allow
+    for a more traveler-centric transportation, providing improved mobility options to all travelers and users of the system
+    in an efficient and safe manner.''
+    \end{block}
+    \begin{itemize}
+        \pause
+        \item{\bf Bike-share}: Hubway, NYC CitiBike, etc.
+        \pause
+        \item{\bf Ride-share}: Zipcar, Car2Go, Enterprise Carshare, etc.
+        \pause
+        \item{\bf Ride-hail}: Uber, Lyft, etc.
+    \end{itemize}
+    
+    \end{frame}
+
+    \begin{frame}{Common issue of the demand heterogeneity}
+        \begin{figure}
+            \centering
+            {\includegraphics[scale=0.19]{plots/NYC-flow.png}}
+            \caption{NYC CitiBike pickups and drop-offs during rush hours\footcite{Liu:2016:RBS:2939672.2939776}.}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Literature}
+    \begin{itemize}
+        \item<1->\alert{Modeling:}
+            \begin{itemize}
+                \item[--]<2-> \textbf{Traffic models:} \textcite{wardrop1900journey,treiber2000congested} \\
+            \end{itemize}
+        \item<1->\alert{Control:}
+            \begin{itemize}
+                \item[--]<3-> \textbf{Dynamic Traffic Assignment:} \textcite{friesz1989dynamic,merchant1978optimality,waller2013linear}
+                \item[--]<3-> \textbf{Demand analysis:} \textcite{froehlich2008measuring,raviv2013static}, \textcite{schuijbroek2017inventory}
+                \item[--]<3-> \textbf{Load balancing:} \textcite{pavone2012robotic}, \textcite{smith2013rebalancing}
+            \end{itemize}
+        \item<1->\alert{Applications:}
+            \begin{itemize}
+                \item[--]<4-> \textbf{Taxi dispatch:} \textcite{zhang2017taxi}
+                \item[--]<4-> \textbf{Customer incentives:} \textcite{singla2015incentivizing}
+                \item[--]<4-> \textbf{Dynamic pricing:} \textcite{castillo2017surge}, \textcite{banerjee2016dynamic}
+            \end{itemize}
+    \end{itemize}    
+    \end{frame}
